@@ -3,12 +3,71 @@
 # https://github.com/luau-lang/luau
 # https://luau.org/
 
-# Code coverage
-coverage.out
+# ==========================================
+# Standard Lua & LuaJIT
+# ==========================================
+*.luac
+luac.out
+*.o
+*.so
+*.dll
+*.dylib
 
-# Profiling
+# LuaRocks
+lua_modules/
+.luarocks/
+
+# ==========================================
+# Luau (Profiling, Coverage & Runtimes)
+# ==========================================
+coverage.out
 profile.out
 profile.svg
-
-# Time trace
 trace.json
+
+# ==========================================
+# Roblox Studio & Toolchain (Rojo / Wally)
+# ==========================================
+# Compiled place & model binaries (comment out *.rbxm if tracking assets)
+*.rbxl
+*.rbxlx
+*.rbxl.lock
+*.rbxlx.lock
+*.rbxm
+*.rbxmx
+
+# Rojo generated sourcemaps
+sourcemap.json
+
+# Wally package directories (recreated via `wally install`)
+Packages/
+ServerPackages/
+DevPackages/
+
+# ==========================================
+# Defold Engine
+# ==========================================
+/.internal/
+/build/
+/.defold/
+
+# ==========================================
+# Editors, OS & Environment
+# ==========================================
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment & Secrets
+.env
+.env.*
