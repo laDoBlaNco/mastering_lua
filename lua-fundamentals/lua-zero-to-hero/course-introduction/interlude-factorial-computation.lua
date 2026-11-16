@@ -1,10 +1,10 @@
 --[[
-INTERLUDE - FACTORIAL COMPUTATION 
+INTERLUDE - FACTORIAL COMPUTATION
 
 - In this lecture we are going to implement a function called 'factorial'
   that given a natural number 'n', it returns the factorial of this number
 
-- A recursive function is a function that calls itself from within its own 
+- A recursive function is a function that calls itself from within its own
   definition. It is a way of solving a problem by breaking it down into smaller
   subproblems and solving them recursively until a base case is reached.
 
@@ -15,5 +15,10 @@ INTERLUDE - FACTORIAL COMPUTATION
     input, moving closer to the base case. The key here is dealing with that final result
     that you did or did not find in the base case.
 ]]
+
+function factorial(n)
+  if n == 0 then return 1 end -- base case
+  return n * factorial(n - 1) -- recursive case
+end
 
 
